@@ -1,6 +1,9 @@
 # Node module #
 ###############
 node_modules
+
+# Bower module #
+################
 bower_components
 
 # Compiled source #
