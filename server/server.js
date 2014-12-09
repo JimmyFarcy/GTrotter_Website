@@ -23,6 +23,7 @@ var connect_user_route = require(route_dir + 'connect_user');
 var new_user_route = require(route_dir + 'new_user');
 var carnets_route = require(route_dir + 'carnets');
 var about_route = require(route_dir + 'about');
+var places_route = require(route_dir + 'places');
 
 /* ----- */
 /* SETUP */
@@ -67,7 +68,7 @@ app.use('/connect-user', connect_user_route);
 app.use('/new-user', new_user_route);
 app.use('/carnets', carnets_route);
 app.use('/about', about_route);
-
+app.use('/places', places_route);
 /* -------------- */
 /* ERROR HANDLING */
 /* -------------- */

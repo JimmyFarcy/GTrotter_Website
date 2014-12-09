@@ -11,7 +11,10 @@ router.route('/')
 		Place.find(function(err, places) {
 			if (err)
 				res.send(err);
-			res.json(places);
+			res.json({
+				path: '/places',
+				places: places
+			});
 		});
 	})
 	.post(function(req, res) {
