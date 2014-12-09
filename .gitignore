@@ -1,6 +1,7 @@
 # Node module #
 ###############
 node_modules
+bower_components
 
 # Compiled source #
 ###################
@@ -49,3 +50,4 @@ Thumbs.db
 ##############
 *.pyo
 *.pyc
+
