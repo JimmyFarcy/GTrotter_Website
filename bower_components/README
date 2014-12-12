@@ -1,0 +1,1 @@
+Here you will be able to find any packages that npm will install for you, if this directory is empty, go to the root folder and run  npm install.

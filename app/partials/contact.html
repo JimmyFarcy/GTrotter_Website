@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="contact">
+<head>
+	<title>GTrotter</title>
+	
+	<!-- include css file here-->
+	<link rel="stylesheet" href="../css/form.css"/> 
+	<link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body >
+
+
+	<div id="main" ng-controller="contactController">
+		<div id="form_sample">
+			<form  ng-model="contact" class="css-form" novalidate>
+				<fieldset>
+
+					<!-- Form Name -->
+					<legend>Formulaire de contact</legend>
+
+					<!-- Text input-->
+					<div class="control-group">
+						<label class="control-label" for="textinput">Name</label>
+						<div class="controls">
+							<input type="text" name="name" ng-model="contact.name" placeholder="Name" class="input-xlarge" autocomplete="off" required>
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="control-group">
+						<label class="control-label" for="textinput">Email</label>
+						<div class="controls">
+							<input type="email" name="email" ng-model="contact.email"  placeholder="example@mail.com" class="input-xlarge" autocomplete="off" required>
+							<span class="error" ng-show="contact.email.$error.required">
+								Required!</span>
+								<!-- <span class="error" ng-show="contact.email.$error.email">
+									Not valid email!</span>
+									<tt>text = {{text}}</tt><br/>
+									<tt>contact.email.$valid = {{contact.email.$valid}}</tt><br/>
+									<tt>contact.email.$error = {{contact.email.$error}}</tt><br/>
+									<tt>contact.$valid = {{contact.$valid}}</tt><br/>
+									<tt>contact.$error.required = {{!!contact.$error.required}}</tt><br/>
+									<tt>contact.$error.email = {{!!contact.$error.email}}</tt><br/> -->
+
+								</div>
+							</div>
+
+							<!-- Text input-->
+							<div class="control-group">
+								<label class="control-label" for="textinput">Subject</label>
+								<div class="controls">
+									<input type="text" name="subject" ng-model="contact.subject" placeholder="Feedbacks / Requests / Questions" class="input-xlarge" autocomplete="off" required>
+								</div>
+							</div>
+
+							<!-- Select input -->
+							<div class="control-group">
+								<label class="control-label" for="textarea">Contact</label>
+								<div class="controls">                     
+									<select id="Contact" ng-init="Contactselected=1" ng-model="Contactselected" required>
+										<option value="webteam@g-trotter.eu">Web support</option>
+										<option value="mobileteam@g-trotter.eu">Mobile support</option>
+										<option value="admin@g-trotter.eu">Admin contact</option>
+										<option value="contact@g-trotter.eu">Feedback</option>
+										<option value="webmail@g-trotter.eu">Other</option>
+									</select></br></br>
+								</div>
+							</div>
+
+								<!-- Textarea -->
+								<div class="control-group">
+									<label class="control-label" for="textarea">Description</label>
+									<div class="controls">                     
+										<textarea rows="4" cols="50"  maxlength="1500" placeholder="Enter the description as precise as you can" data-ng-minLength="1" data-ng-model="contact.description" autocomplete="off" required></textarea>
+									</div>
+								</div>
+								<span class="form-help">{{1500-contact.description.length}}Characters</span></br></br>
+
+
+								<!-- Button -->
+								<div class="control-group">
+									<div class="controls">
+										<button id="Submit" name="Submit" class="btn btn-primary" ng-click="submitMail(contact, 'callBack')" ng-disabled="contact.$invalid" >Send</button>
+									</div>
+								</div>
+
+							</fieldset>
+						</form>
+						  <textarea id="submitDebugText">{{callBack | json}}</textarea><br />
+					</div>
+				</div>
+			<script src="../../bower_components/angular/angular.js"></script>
+			<!-- <script src="../js/app.js"></script>-->
+			<script src="../js/form.js"></script>
+			</body>
+			</html>

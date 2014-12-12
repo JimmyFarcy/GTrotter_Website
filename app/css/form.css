@@ -1,0 +1,116 @@
+
+/*@import url(http://fonts.googleapis.com/css?family=Ubuntu);*/
+html{
+	background: url(../images/background.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div#main{
+	width: 25%;
+	height: 25%;
+	margin: 0px auto; 
+	font-family: 'Ubuntu', sans-serif;
+}
+
+label{
+	display: inline-block;
+	width: 140px;
+	text-align: right; 
+}
+
+div#form_sample{
+	text-align:center;
+	border: 1px solid #ccc;
+	width: 100%;
+	padding: 0px 50px 15px;
+	margin-top:20px;
+	box-shadow: 0 0 15px;
+	border-radius: 6px;
+	float:left;
+	background-color: #ffffff;
+	opacity:0.8;
+/*	filter:alpha(opacity=60); /* For IE8 and earlier */
+
+}
+
+#main h1{
+	margin-top:40px; 
+}
+
+.transparent {
+/*	zoom: 1;
+	filter: alpha(opacity=50); FOR IE8 and earlier
+*/	opacity: 0.5;
+}
+
+hr{
+	margin-top:-5px;
+}
+
+label{
+	text-align:center;
+	font-size: 16px;
+}
+
+select{
+	width:60%;
+	margin-top:10px;
+	height: 42px;
+	margin-bottom: 25px;
+	padding:10px;
+	border:3px solid #2BC1F2;
+	border-radius: 8px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+input[type="text"]{
+	width:100%;
+	margin-top:10px;
+	height: 42px;
+	margin-bottom: 25px;
+	padding:10px;
+	border:3px solid #2BC1F2;
+	border-radius: 8px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+input[type="email"]{
+	width:100%;
+	margin-top:10px;
+	height: 42px;
+	margin-bottom: 25px;
+	padding:10px;
+	border:3px solid #2BC1F2;
+	border-radius: 8px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+textarea{
+	width:100%;
+	margin-top: 10px;
+	height: 100px;
+	padding:10px;
+	margin-bottom: 25px;
+	border:3px solid #2BC1F2;
+	resize:auto;
+	border-radius: 8px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+input[type="submit"]{
+	width:100%;
+	padding: 10px 45px;
+	background-color: #2BC1F2;
+	border: none;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	font-family: 'Ubuntu', sans-serif;
+}

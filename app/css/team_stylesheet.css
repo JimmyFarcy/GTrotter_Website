@@ -1,0 +1,38 @@
+/* ============================================================== TEAM ============================================================= */
+#teamate0, #teamate1, #teamate2, #teamate3, #teamate4, #teamate5, #teamate6, #teamate7{
+	position:relative;
+	z-index:0;
+}
+
+.team_img{
+    width:160px;
+    height:190px;
+}
+
+#people_talk
+{
+	width: 150px;
+	height: 150px;
+	background: #FFF;
+	border: red outset 5px;
+	text-align: center;
+	position: fixed;
+	margin-left: -75px;
+	margin-top: -75px;
+	left: 50%;
+	top: 50%;
+	z-index: 20;
+	display: none;
+}
+
+#screen{
+	position:absolute;
+	left:0;
+	top:0;
+	background:#000;
+	z-index:10;
+}
+
+#button{
+	position:relative;
+}

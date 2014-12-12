@@ -1,0 +1,45 @@
+/* ============================================================== MENU STYLE SHEET ================================================= */
+ .menu_bar{
+    width:100%;
+    height:50px;
+    position:absolute;
+    top:0;
+    left:10px;
+    }
+.logo{
+    float:left;
+    position:fixed;
+    }
+.navigation{
+    right:46px;
+    float:right;
+    position:fixed;
+    z-index:20;
+	margin: 0 auto; left:0px; right:0px;
+    }
+
+.navigation ul li{
+    list-style:none;
+    margin-right: 10px;
+    float:left;
+    }
+
+#login_box
+{
+	width: 400px;
+	height: 600px;
+	background: #FFF;
+	border: 5px;
+	text-align: center;
+	position: fixed;
+	margin-left: -200px;
+	margin-top: -75px;
+	left: 50%;
+	top: 20%;
+	z-index: 20;
+	display: none;
+}
+/* ============================================================== SPECIAL CLASS ==================================================== */
+.cleaner{
+    clear:both;
+}
