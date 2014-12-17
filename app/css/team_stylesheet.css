@@ -4,6 +4,45 @@
 	z-index:0;
 }
 
+.talk{
+	background-color: black;
+    opacity: 0;
+	left: calc((100% - 160px) / 2);
+	top: 0px;
+    height: 190px;
+    width: 160px;
+    line-height: 190px;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out 0s;
+    vertical-align: middle;
+    z-index: 20;
+}
+
+.talk p {
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+	font-size: 14px;
+    line-height: normal;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.talk:hover {
+    background-color: black;
+    color: #FFFFFF;
+    left: calc((100% - 160px) / 2);
+	top: 0px;
+    height: 190px;
+    width: 160px;
+    line-height: 190px;
+    opacity: 0.7;
+    position: absolute;
+	-webkit-transition: color .2s, text-shadow .2s;
+    transition: opacity 0.5s ease-in-out 0s;
+    vertical-align: middle;
+}
+
 .team_img{
     width:160px;
     height:190px;

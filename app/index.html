@@ -14,7 +14,7 @@
 		<script src="js/Menu.js"></script>
 	</head>
 	<body>
-		<div class="container"><br/>
+		<div class="container" id="main_div"><br/>
 			<section class="row" id="home">
 				<div>
 					<div class="col-lg-6 col-lg-offset-5">
@@ -28,7 +28,7 @@
 			</section><br/>
 			<section class="row">
 				<div style="">
-					<a name="projet"></a>
+					<a name="projet" class="anchor_title"></a>
 					<div class="title_project">
 						<p>PROJET</p>
 					</div>
@@ -47,7 +47,7 @@
 			</section><br/>
 			<section class="row">
 				<div>
-					<a name="equipe"><center><h1>N O U S</h1></center></a>
+					<a name="equipe" class="anchor_title"><center><h1>N O U S</h1></center></a>
 					<div class="col-12"><center>
 						<p>Une équipe d'étudiants autant passioné par l'informatique que par les voyages</p>
 					</center></div>
@@ -57,49 +57,73 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate0">
-								<img src="images/benjamin_bagot_epitech.jpg" class="team_img" alt="Benjamin BAGOT"  onclick="teamate_talk('0');">
+								<div class='talk'>
+									<p>Developpeur Web</p>
+								</div>
+								<img src="images/benjamin_bagot_epitech.jpg" class="team_img" alt="Benjamin BAGOT">
 								<p>Benjamin BAGOT</p>
 							</center>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate1">
-								<img src="images/cedric_guerrier_epitech.jpg" class="team_img" alt="Cedric GUERRIER"  onclick="teamate_talk('1');">
+								<div class='talk'>
+									<p>Developpeur Web</p>
+								</div>
+								<img src="images/cedric_guerrier_epitech.jpg" class="team_img" alt="Cedric GUERRIER">
 								<p>Cedric GUERRIER</p>
 							</center>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate2">
-								<img src="images/gregory_quere_epitech.jpg" class="team_img" alt="Gregory QUERE"  onclick="teamate_talk('2');">
+								<div class='talk'>
+									<p>Developpeur Web Map</p>
+								</div>
+								<img src="images/gregory_quere_epitech.jpg" class="team_img" alt="Gregory QUERE">
 								<p>Gregory QUERE</p>
 							</center>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate3">
-								<img src="images/jimmy_farcy_epitech.jpg" class="team_img" alt="Jimmy FARCY"  onclick="teamate_talk('3');">
+								<div class='talk'>
+									<p>Responsable Web</p>
+								</div>
+								<img src="images/jimmy_farcy_epitech.jpg" class="team_img" alt="Jimmy FARCY">
 								<p>Jimmy FARCY</p>
 							</center>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate4">
-								<img src="images/julian_hoquang_epitech.jpg" class="team_img" alt="Julian HO QUANG"  onclick="teamate_talk('4');">
+								<div class='talk'>
+									<p>Developpeur iOS</p>
+								</div>
+								<img src="images/julian_hoquang_epitech.jpg" class="team_img" alt="Julian HO QUANG">
 								<p>Julian HO QUANG</p>
 							</center>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate5">
-								<img src="images/mathieu_ville_epitech.jpg" class="team_img" alt="Mathieu VILLE"  onclick="teamate_talk('5');">
+								<div class='talk'>
+									<p>Chef d'Equipe Responsable Serveur</p>
+								</div>
+								<img src="images/mathieu_ville_epitech.jpg" class="team_img" alt="Mathieu VILLE">
 								<p>Mathieu VILLE</p>
 							</center>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate6">
-								<img src="images/mortimer_leborgne_epitech.jpg" class="team_img" alt="Mortimer LEBORGNE"  onclick="teamate_talk('6');">
+								<div class='talk'>
+									<p>Developpeur Windows Phone</p>
+								</div>
+								<img src="images/mortimer_leborgne_epitech.jpg" class="team_img" alt="Mortimer LEBORGNE">
 								<p>Mortimer LEBORGNE</p>
 							</center>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate7">
-								<img src="images/yoann_bourgault_epitech.jpg" class="team_img" alt="Yoann BOURGAULT"  onclick="teamate_talk('7');">
+								<div class='talk'>
+									<p>Developpeur Web</p>
+								</div>
+								<img src="images/yoann_bourgault_epitech.jpg" class="team_img" alt="Yoann BOURGAULT">
 								<p>Yoann BOURGAULT</p>
 							</center>
 						</div>
@@ -107,12 +131,10 @@
 				</div>
 			</section>
 			<br/>
-			<div id="people_talk">
-			</div>
 			<div id="screen">
 			</div>
 			<section class="row">
-				<a name="timeline">
+				<a name="timeline" class="anchor_title">
 					<div style="background:green;">
 						<p>TIMELINE</p>
 						<div class="col-lg-12">
