@@ -5,13 +5,23 @@
 		<meta charset="utf-8">
 		<link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 		<link href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+		<link href="../bower_components/vis/vis.css" rel="stylesheet">
+		<link href="../bower_components/jVectorMap/jquery-jvectormap-2.0.1.css" rel="stylesheet">
 		<script src="../bower_components/jquery/dist/jquery.js"/></script>
-		<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script><link href="css/basic_stylesheet.css" rel="stylesheet">
+		<script src="../bower_components/vis/vis.js"/></script>
+		<script src="../bower_components/jVectorMap/jquery-jvectormap-2.0.1.min.js"></script>
+		<script src="../bower_components/jVectorMap/jquery-jvectormap-world-mill-en.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<link href="css/basic_stylesheet.css" rel="stylesheet">
 		<link href="css/accueil_stylesheet.css" rel="stylesheet">
 		<link href="css/project_stylesheet.css" rel="stylesheet">
 		<link href="css/team_stylesheet.css" rel="stylesheet">
-		<link href="css/timeline_stylesheet.css" rel="stylesheet"><script src="js/Team.js"></script>
+		<link href="css/timeline_stylesheet.css" rel="stylesheet">
+		<script src="js/Team.js"></script>
 		<script src="js/Menu.js"></script>
+		<script src="js/Timeline.js"></script>
+		<script src="js/data_map.js"></script>
+		<script src="js/world_map.js"></script>
 	</head>
 	<body>
 		<div class="container" id="main_div"><br/>
@@ -121,7 +131,7 @@
 						<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 							<center id="teamate7">
 								<div class='talk'>
-									<p>Developpeur Web</p>
+									<p>Developpeur Serveur</p>
 								</div>
 								<img src="images/yoann_bourgault_epitech.jpg" class="team_img" alt="Yoann BOURGAULT">
 								<p>Yoann BOURGAULT</p>
@@ -134,14 +144,17 @@
 			<div id="screen">
 			</div>
 			<section class="row">
-				<a name="timeline" class="anchor_title">
-					<div style="background:green;">
-						<p>TIMELINE</p>
-						<div class="col-lg-12">
-							<img src="images/logo.jpg" width="100%" height="100%">
-						</div>
+				<a name="timeline" class="anchor_title"><center><h1>Notre Progression</h1></center></a>
+					<div id="TimeLine">
 					</div>
-				</a>
+					<script>launch_timeline();</script>
+			</section><br/>
+			<section class="row">
+				<a name="worldmap" class="anchor_title"><center><h1>Nos Données Récoltées</h1></center></a>
+				<div id="world-map" style="width: 100%; height: 600px;"></div>
+				<script>
+					call_map();
+				</script>
 			</section><br/>
 			<div class="menu_bar">
 				<div class="navigation">

@@ -4,8 +4,7 @@
 }
 
 body {
-	background: url("../images/main_background.png") repeat;
-	
+	-background: url("../images/main_background.png") repeat;
 }
 
 /* ============================================================== MENU STYLE SHEET ================================================= */
@@ -50,6 +49,38 @@ body {
 	display: none;
 }
 
+/* ============================================================== TIMELINE STYLE SHEET ============================================= */
+#TimeLine{
+	background-color: white;
+}
+.vis.timeline .item.background.server_time{
+	background-color: blue;
+	opacity: 0.8;
+}
+.vis.timeline .item.background.server_time_after{
+	background-color: blue;
+	opacity: 0.3;
+}
+.vis.timeline .item.background.site_time{
+	background-color: green;
+	opacity: 0.8;
+}
+.vis.timeline .item.background.site_time_after{
+	background-color: green;
+	opacity: 0.3;
+}
+.vis.timeline .item.background.ios_time{
+	background-color: pink;
+	opacity: 0.8;
+}
+.vis.timeline .item.background.wp_time{
+	background-color: yellow;
+	opacity: 0.8;
+}
+.vis.timeline .item.background.android_time{
+	background-color: red;
+	opacity: 0.8;
+}
 /* ============================================================== SPECIAL CLASS ==================================================== */
 .cleaner{
     clear:both;
