@@ -1,4 +1,5 @@
 
+// ============================================================ TIMELINE ================================================================== */
 	function get_date_today()
 	{
 		var now = new Date();
@@ -89,4 +90,36 @@
 		};
 
 		var timeline = new vis.Timeline(container, items, groups, options);
+	}
+
+// ============================================================ MENU ================================================================================= */
+	function Login_dropdown()
+	{
+		for (var info = 0; info < 9; info++)
+			$('#teamate'+info).css({"z-index" : "1"});
+
+		$('#screen').css({"display": "block", opacity: 0.7, "width":$(document).width(),"height":$(document).height()});
+		$('#screen').click(function(){$(this).css("display", "none");$('#screen').css("display", "none");$("#login_box").css("display", "none")});
+		$('#login_box').css({"display": "block"});
+		$('#screen').css({"z-index" : "11"});
+	}
+
+// ============================================================ WORLDMAP ============================================================================= */
+	function call_map()
+	{
+		$(function(){
+			$('#world-map').vectorMap({
+				map: 'world_mill_en',
+				series: {
+					regions: [{
+						values: gdpData,
+						scale: ['#C8EEFF', '#0071A4'],
+						normalizeFunction: 'polynomial'
+					}]
+				},
+					onRegionTipShow: function(e, el, code){
+					el.html(el.html()+' '+gdpData[code]+' Photos');
+				}
+			});
+		}); 
 	}
