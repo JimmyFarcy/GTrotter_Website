@@ -115,6 +115,115 @@
 		$('#screen').css({"z-index" : "11"});
 	}
 
+// ============================================================ CONNEXION - INSCRIPTION ================================================================================= */
+
+	function Connexion_check()
+	{
+		var app = angular.module('mod', [])
+		.directive('equalsTo', [function () {
+		/*
+		 * <input type="password" ng-model="Password" />
+		 * <input type="password" ng-model="ConfirmPassword" equals-to="Password" />
+		 */
+		return {
+			restrict: 'A', // S'utilise uniquement en tant qu'attribut
+			scope: true,
+			require: 'ngModel',
+			link: function (scope, elem, attrs, control) {
+				var check = function () {
+					//Valeur du champs courant
+					var v1 = scope.$eval(attrs.ngModel); // attrs.ngModel = "ConfirmPassword"
+	 
+					//valeur du champ à comparer
+					var v2 = scope.$eval(attrs.equalsTo).$viewValue; // attrs.equalsTo = "Password"
+					return v1 == v2;
+				};
+				scope.$watch(check, function (isValid) {
+					// Défini si le champ est valide
+					control.$setValidity("equalsTo", isValid);
+				});
+			}
+		};
+	}]);
+		
+		
+		(function ($) {
+		  $('.ui.form').form({
+			givenName: {
+			  identifier: 'GivenName',
+			  rules: [{
+				type: 'empty',
+				prompt: 'Please enter your given name'
+			  }]
+			},
+			surname: {
+			  identifier: 'Surname',
+			  rules: [{
+				type: 'empty',
+				prompt: 'Please enter your surname'
+			  }]
+			},
+			username: {
+			  identifier: 'Username',
+			  rules: [{
+				type: 'empty',
+				prompt: 'Please enter a username'
+			  }]
+			},
+			email: {
+			  identifier: 'Email',
+			  rules: [{
+				type: 'empty',
+				prompt: 'Please enter your email'
+			  }, {
+				type: 'email',
+				prompt: 'Please enter a valid email'
+			  }]
+			},
+			password: {
+			  identifier: 'Password',
+			  rules: [{
+				type: 'empty',
+				prompt: 'Please enter a password'
+			  }, {
+				type: 'length[6]',
+				prompt: 'Password needs to be atleast 6 characters long'
+			  }]
+			},
+			passwordConfirm: {
+			  identifier: 'PasswordConfirm',
+			  rules: [{
+				type: 'match[Password]',
+				prompt: 'Password don\'t match'
+			  }]
+			}
+		  }, {
+			on: 'blur'
+		  });
+		}(jQuery));
+
+		function RegisterController($scope, $element) {
+		  var registrationForm = $($element);
+
+		  $scope.user = {};
+		  $scope.loading = false;
+
+		  $scope.isInvalid = function () {
+			return !registrationForm.form('validate form');
+		  };
+
+		  $scope.register = function () {
+			if (this.isInvalid()) {
+			  return;
+			}
+
+			this.loading = true;
+
+			console.log(this.user);
+		  };
+		}
+	}
+	
 // ============================================================ WORLDMAP ============================================================================= */
 	function call_map()
 	{
