@@ -86,10 +86,20 @@ body {
 {
 	margin-left: 150px;
 }
-
 #genre-choice
 {
 	margin-right: 300px;
+}
+
+#age
+{
+	margin-top: 20px;
+	margin-right: 70px;
+}	
+#age-choice
+{
+	margin-left: 130px;
+	width: initial;
 }
 
 
