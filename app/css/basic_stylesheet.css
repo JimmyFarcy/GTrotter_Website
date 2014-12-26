@@ -102,6 +102,11 @@ body {
 	width: initial;
 }
 
+#avatar
+{
+	margin-top: 20px;
+	margin-left: -17px;
+}
 
 /* ============================================================== TIMELINE STYLE SHEET ============================================= */
 #TimeLine{

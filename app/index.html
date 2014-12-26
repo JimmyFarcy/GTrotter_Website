@@ -4,6 +4,10 @@
 		<title>Accueil</title>
 		<meta charset="utf-8">
 		<script src="../bower_components/jquery/dist/jquery.js"/></script>
+		
+		<script src="../bower_components/angular-file-upload/angular-file-upload.min.js"/></script>
+		<script src="../bower_components/angular-file-upload/angular-file-upload-shim.min.js"/></script>
+		
 		<link  href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 		<link  href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
 		<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -324,7 +328,21 @@
 									 <option>100 or More</option>
 								</select>
 							</div>
+							
+							<div id="avatar">
+								<label id="avatar-title" class="col-sm-3 control-label"  for="Avatar">Avatar</label>
+								<!--<input type="text" ng-model="myModelObj">-->
 
+								<input type="file" ng-file-select="onFileSelect($files)" multiple accept="image/*">
+								<div class="button" ng-file-select="onFileSelect($files)" data-multiple="true"></div>
+								
+								<!--<button ng-click="upload.abort()">Cancel Upload</button>-->
+								</div>
+							</div>
+							<script>
+								Upload_file();
+							</script>
+ 
  
 						<div class="form-group">
 								<div>
