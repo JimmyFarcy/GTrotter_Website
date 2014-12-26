@@ -82,6 +82,16 @@ body {
 	margin-top: 40px;
 }
 
+#genre
+{
+	margin-left: 150px;
+}
+
+#genre-choice
+{
+	margin-right: 300px;
+}
+
 
 /* ============================================================== TIMELINE STYLE SHEET ============================================= */
 #TimeLine{
