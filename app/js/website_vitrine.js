@@ -3,9 +3,9 @@
 	function get_date_today()
 	{
 		var now = new Date();
- 
+		
 		var annee   = now.getFullYear();
-		var mois    = ('0'+now.getMonth()+1).slice(-2);
+		var mois    = ('0'+(now.getMonth()+1)).slice(-2);
 		var jour    = ('0'+now.getDate()   ).slice(-2);
 		
 		return ("" + annee + "-" + mois + "-" + jour);
@@ -14,7 +14,7 @@
 	function launch_timeline()
 	{
 		var today = get_date_today();
-
+		
 		var items = new vis.DataSet({
 			type: { start: 'ISODate', end: 'ISODate' }
 		});
