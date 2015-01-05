@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>GTrotter</title>
+	<script src="../utils/jquery-2.1.3.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		var email, password;
+		$("#submit").click(function() {
+			email= $("#email").val();
+			password= $('#password').val();
+			$.post("http://localhost:1337/login", {
+				email: email,
+				pass: password
+			}, function (data) {
+				if (data === 'done') {
+					window.location.href= "/admin";
+				}
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="text" size="40" placeholder="type your email" id="email"><br />
+	<input type="password" size="40" placeholder="Type your password" id="password"><br />
+	<input type="button" value="submit" id="submit">
+</body>
+</html>
