@@ -7,6 +7,56 @@ body {
 	-background: url("../images/main_background.png") repeat;
 }
 
+
+.presentation_title{
+	padding-top: 20px;
+	font: bold 34px "Century Schoolbook", Georgia, Times, serif;
+	color: #333;
+	line-height: 90%;
+	margin: .2em 0 .4em 0;
+	letter-spacing: -2px;
+}
+
+h2 { 
+   position: absolute; 
+   top: 50px; 
+   left: 10px; 
+   width: 100%; 
+}
+h2 span { 
+   color: white; 
+   font: bold 18px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0);
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+h2 span.spacer {
+   padding:0 5px;
+}
+
+#partage{
+	position: relative; 
+	width: 100%;
+	height: 500px;
+}
+#security{
+	position: relative; 
+	width: 100%;
+	height: 500px;
+}
+#mobility{
+	position: relative; 
+	width: 100%;
+	height: 500px;
+}
+#inscription{
+	position: relative; 
+	width: 100%;
+	height: 500px;
+	padding-bottom: 20px;
+}
+
 /* ============================================================== HOME STYLE SHEET ================================================= */
 #home{
 	margin-top: 30px;
